@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+            <lightning-button variant="Brand" label={labelName} onclick={handleClick}></lightning-button>
+            <template if:true={Event}>
+                <p align="center">Hi Folks</p>
+            </template>
+            <template if:false={Event}>
+                <p align="center">Thanks For seeing Me</p>
+            </template>
+        </div>
+    </lightning-card>
+    <hr>
+    <lightning-card title="Conditional Rendering with Event">
+        <div class="slds-var-m-around_medium">
+          <lightning-input type="text" value={inputValue} onchange={handleChange}>
+            <template if:true={show}>
+                <p align="center"> Hi {inputValue}</p>
+            </template>
+          </lightning-input>
+        </div>
+    </lightning-card>
+</template>
