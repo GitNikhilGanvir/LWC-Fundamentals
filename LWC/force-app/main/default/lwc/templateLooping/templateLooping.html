@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title="Template Looping">
+        <div class="slds-car-m-around_medium">
+            <template for:each={array} for:item="item">
+                <p align="center" key={item}>{item}</p>
+            </template>
+
+            <template for:each={array2} for:item="item">
+                <p align="center" key={item.id}>{item.Name}</p>
+            </template>
+
+            <template iterator:arr={array}>
+                <p align="center" key={arr.value}>{arr.value}</p>
+            </template>
+
+            <template iterator:arr={array2}>
+                <p align="center" key={arr.value.id}>{arr.value.Name}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
