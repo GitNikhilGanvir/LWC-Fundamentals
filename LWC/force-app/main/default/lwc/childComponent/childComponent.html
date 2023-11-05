@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Child Component">
+        <p align="center">{msg}</p>
+        <hr>
+        <template for:each={array} for:item="item">
+            <p align="center" key={item.id}>{item.Name}</p>
+        </template>
+
+        <template if:true={show}>
+            <p align="center">Hi You call Me from Parent</p>
+        </template>
+
+        <p align="center">{inputChild}</p>
+    </lightning-card>
+</template>

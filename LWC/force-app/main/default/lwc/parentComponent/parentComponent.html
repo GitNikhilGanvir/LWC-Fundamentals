@@ -1,0 +1,7 @@
+<template>
+    <lightning-card title="Parent Component">
+        <lightning-button variant="brand" label="Action" onclick={handleClick} class="slds-var-p-left_medium"></lightning-button>
+        <lightning-input  type="text" label="Type here" value={inputValue} onchange={handleChange}></lightning-input>
+        <c-child-component msg={message} array={arrayData} input-child={inputValue} ></c-child-component>
+    </lightning-card>
+</template>
